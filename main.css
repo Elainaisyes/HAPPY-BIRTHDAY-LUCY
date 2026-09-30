@@ -1,0 +1,40 @@
+:root{
+    --bg-primary: rgb(164, 202, 247);
+    --bg-secondary: rgb(206, 224, 246);
+}
+
+:root, html, body {
+    min-height: 100dvh;
+    margin: none;
+    padding: none;
+}
+
+body{
+    background: linear-gradient(var(--bg-primary), var(--bg-secondary));
+    color: rgba(255,255,255,0.75);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 2px 1px rgba(31, 78, 137, 0.75);
+}
+
+.info-container {
+    margin: auto;
+    width: 80%;
+    background: linear-gradient(-55deg, rgb(231, 161, 188), rgb(239, 197, 213));
+    flex-grow: 1;
+    margin-bottom: 10%;
+    border-radius: 20px;
+    outline: 2px solid rgba(255,255,255,0.85);
+    border: 3px solid rgba(195, 35, 160, 0.4);
+    box-shadow: 2px 2px 10px rgb(199, 23, 96, 0.75); 
+    padding-inline: 1rem;
+    
+    color: rgba(255,255,255,0.85);
+    text-shadow: 1px 1px 1px rgba(75, 14, 36, 0.75);
+
+}
