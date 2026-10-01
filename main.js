@@ -22,7 +22,7 @@ cd.addEventListener('click', async () => {
             console.error('Audio playback failed:', error);
         }
     }
-    
+
     cdContainer.style.animationPlayState = cdActivated ? 'running' : 'paused';
 });
 
@@ -32,7 +32,7 @@ function createSparkle() {
     const sparkle = document.createElement('span');
     sparkle.className = 'sparkle';
     const choice = Math.floor(Math.random() * 4)
-    sparkle.textContent = choice != 0 ? '✦' : '❤';
+    sparkle.textContent = choice != 0 ? '✦' : '♥';
     sparkle.style.left = `${Math.random() * 100}%`;
     sparkle.style.top = `${Math.random() * 100}%`;
     sparkle.style.fontSize = `${8 + Math.random() * 10}px`;
