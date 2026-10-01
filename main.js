@@ -10,9 +10,19 @@ heaven.loop = true;
 let cdActivated = false;
 
 
-cd.addEventListener('click', () => {
-    cdActivated = cdActivated ? false : true;
-    cdActivated ? heaven.play() : heaven.pause();
+cd.addEventListener('click', async () => {
+    if (cdActivated) {
+        heaven.pause();
+        cdActivated = false;
+    } else {
+        try {
+            await heaven.play();
+            cdActivated = true;
+        } catch (error) {
+            console.error('Audio playback failed:', error);
+        }
+    }
+    
     cdContainer.style.animationPlayState = cdActivated ? 'running' : 'paused';
 });
 
